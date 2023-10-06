@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  /* 8가지 타입 날씨효과 적용 */
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 400px; /* 카드의 너비 */
+  height: 500px; /* 카드의 높이 */
+  background-color: rgba(255, 255, 255, 0.8); /* 투명한 배경 색상 */
+  border-radius: 10px; /* 둥근 경계 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  padding: 20px; /* 내용과 경계 사이의 여백 */
+  transition: transform 0.3s ease-in-out; /* 호버 효과를 위한 애니메이션 */
+}
+
+.card:hover {
+  transform: scale(1.05); /* 호버 시 확대 효과 */
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-section input {
+  margin-right: 10px;
+  flex-grow: 1;
+  padding: 15px; /* 내용과 경계 사이의 여백 */
+  border: none; /* 테두리 제거 */
+  border-radius: 15px; /* 둥근 경계 */
+  background-color: #f0f0f0; /* 배경 색상 설정 */
+
+  outline: none; /* 포커스 시 아웃라인 제거 */
+}
+
+.search-section input:hover {
+  background-color: #e0e0e0; /* 호버 시 배경 색상 변경 */
+}
+
+.search-icon {
+  background: #f0f0f0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  background-color: #e0e0e0; /* 호버 시 배경 색상 변경 */
+}
+
+.search-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.weather-section {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.weather-section div {
+  width: 100px;
+  height: 100px;
+  background: green;
+}
+
+.weather-section h2 {
+  font-size: 54px;
+  font-weight: 500;
+}
+
+.weather-section h3 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.extra-section {
+  margin-top: 15px;
+  display: flex;
+}
+
+.humidity,
+.wind {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.icon-wrap {
+  width: 75px;
+  height: 75px;
+}
+
+.icon-wrap img {
+  width: 100%;
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.loading.active {
+  display: flex;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  animation: moveUpDown 1s alternate infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.CLEAR_DAY {
+  background: linear-gradient(to bottom, #87ceeb, #1e90ff);
+}
+.CLEAR_NIGHT {
+  background: linear-gradient(to bottom, #0c1440, #283e59);
+}
+
+.PARTLY_CLOUDY_DAY {
+  background: linear-gradient(to bottom, #87ceeb, #1e90ff, #87ceeb);
+}
+
+.PARTLY_CLOUDY_NIGHT {
+  background: linear-gradient(to bottom, #0c1440, #283e59, #0c1440);
+}
+
+.CLOUDY {
+  background: linear-gradient(to bottom, #a9a9a9, #d3d3d3);
+}
+
+.RAIN {
+  background: linear-gradient(
+    to bottom,
+    #005c93 0%,
+    #0074b3 50%,
+    #0080c7 51%,
+    #0087d1 100%
+  );
+}
+
+.SNOW {
+  background: linear-gradient(
+    to bottom,
+    #f0f8ff,
+    #e6f7ff,
+    #d9f2ff,
+    #ccedff,
+    #c0e7ff
+  );
+}
+
+.FOG {
+  background: linear-gradient(to bottom, #f5f5f5, #d3d3d3);
+}

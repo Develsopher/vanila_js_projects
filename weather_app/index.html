@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HowIsTheWeather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="search-section">
+        <input id="search-city" type="text" placeholder="enter the city name" />
+        <div class="search-icon">
+          <img src="images/search_icon.png" alt="city search icon" />
+        </div>
+      </div>
+      <div class="loading">Loading...</div>
+      <div class="main">
+        <div class="weather-section">
+          <canvas class="icon" width="128" height="128"></canvas>
+          <h2><span class="location-temperature"></span>&deg;c</h2>
+          <h3 class="location-city"></h3>
+        </div>
+        <div class="extra-section">
+          <div class="humidity">
+            <div class="icon-wrap">
+              <img src="images/humidity_icon.png" alt="humidity" />
+            </div>
+            <div class="humidity-info">
+              <p><span class="location-humidity"></span>%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="wind">
+            <div class="icon-wrap">
+              <img src="images/wind_icon.png" alt="wind" />
+            </div>
+            <div class="wind-info">
+              <p><span class="location-wind"></span>&nbsp;km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js" type="module"></script>
+    <script src="skycons.js"></script>
+  </body>
+</html>
